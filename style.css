@@ -1,0 +1,864 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-color: #111;
+  color: rgb(243, 237, 237);
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: right: 50;
+  ;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: rgb(243, 237, 237);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url('https://via.placeholder.com/1400x400') center/cover no-repeat;
+  color: rgb(2, 0, 0);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero .btn {
+  display: inline-block;
+  background-color: #ff0000;
+  color: rgb(236, 233, 233);
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.bikes-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.bike-card {
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bike-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.contact-section {
+  background-color: #eee;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  background-color: #ff0000;
+  color: rgb(253, 250, 250);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.bike-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05) saturate(1.2);
+}
+
+.video-section {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.video-circle {
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.video-circle video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional hover effect */
+.video-circle:hover {
+  transform: scale(1.05);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+  /* darken for better text contrast */
+}
+
+.hero .container {
+  z-index: 1;
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #c40000;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Ensures the header stays above other elements */
+  background-color: #030000;
+  /* Optional: Set a background to prevent transparency */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 100px auto;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-footer {
+  background-color: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+}
+
+.map-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  border: 3px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-section {
+  background-image: url('kk.jpg');
+  /* Replace with your actual image filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: white;
+}
+
+.video-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.video-circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.video-circle video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-item {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-item h3 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #34495e;
+  text-align: center;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00796b;
+  position: relative;
+}
+
+.contact-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #00796b;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+.contact-section button {
+  padding: 12px;
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #004d40;
+}
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .bike-card {
+    width: 90%;
+    /* Take most of the screen width */
+    margin: 20px auto;
+    /* Center the cards */
+    padding: 20px;
+  }
+
+  .bike-card img {
+    max-height: 180px;
+    /* Slightly reduce image height on smaller screens */
+  }
+
+  .bike-grid {
+    flex-direction: column;
+    /* Stack cards vertically */
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+.bike-card img {
+  width: 100%;
+  /* Fill the card width */
+  height: auto;
+  /* Keep aspect ratio */
+  max-height: 350px;
+  /* Limit height on desktop, adjust as needed */
+  object-fit: cover;
+  /* Crop nicely if needed */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Make bike cards stack and scale images on smaller screens */
+@media (max-width: 768px) {
+
+  .bike-grid,
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bike-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .bike-card img {
+    max-height: 250px;
+  }
+}
+
+.bike-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.bike-card {
+  flex: 1 1 calc(33.333% - 20px);
+  /* 3 per row on desktop */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.bike-card img {
+  width: 100%;
+  height: 300px;
+  /* force a fixed large height */
+  object-fit: cover;
+  /* crop image to fill the space */
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .bike-card {
+    flex: 1 1 calc(50% - 20px);
+    /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .bike-card {
+    flex: 1 1 100%;
+    /* 1 per row on mobile */
+  }
+
+  .bike-card img {
+    height: 250px;
+    /* slightly smaller on small screens */
+  }
+}
+
+.bike-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  /* keeps image centered even if cropped */
+  border-radius: 10px;
+  display: block;
+}
+
+.bike-card img {
+  object-fit: contain;
+  /* fit fully inside without cropping */
+  background: #eee;
+  /* light background to fill empty space */
+}
+
+.bike-card {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content takes all space above footer */
+.wrapper {
+  flex: 1;
+}
+
+/* Footer styling */
+.site-footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.bike-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.explore-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff4500;
+  /* vibrant orange for attention */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button:hover {
+  background-color: #e03e00;
+  transform: translateY(-2px);
+}
+
+.top-model-card {
+  width: 280px;
+  /* increased from smaller width */
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+.top-model-card:hover {
+  transform: scale(1.05);
+}
+
+.top-model-card img {
+  width: 100%;
+  /* Fill the container */
+  height: 200px;
+  /* Increase height for bigger display */
+  object-fit: cover;
+  /* Keeps proportions nicely */
+  border-radius: 12px;
+}
+
+<style>
+
+/* Forcefully increase image and card size */
+.card {
+  width: 320px !important;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background: white;
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+</style><div class="card"><img src="bmw.jpg" alt="BMW"><h3>BMW</h3><p>200 HP,
+998cc Supersport</p></div>.explore-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff4500;
+  /* vibrant orange for attention */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button:hover {
+  background-color: #e03e00;
+  transform: translateY(-2px);
+}
+
+.upcoming-bikes-section .scroll-container {
+  overflow: hidden;
+  width: 100%;
+  background: #f8f8f8;
+  padding: 20px 0;
+  position: relative;
+}
+
+.upcoming-bikes-section .scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.upcoming-bikes-section .bike-card {
+  width: 220px;
+  flex-shrink: 0;
+  margin: 0 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(181, 130, 223, 0.1);
+  text-align: center;
+  padding: 12px;
+}
+
+.upcoming-bikes-section .bike-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.upcoming-bikes-section {
+  background: linear-gradient(135deg, #f0f4f8, #dbeafe);
+  /* light blue gradient */
+  padding: 60px 20px;
+}
+
+.stay-connected-section {
+  background: linear-gradient(135deg, #f0f4f8, #dbeafe);
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.stay-connected-section .section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.stay-connected-section .scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.stay-connected-section .scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.stay-connected-section .bike-card {
+  width: 220px;
+  flex-shrink: 0;
+  margin: 0 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 12px;
+}
+
+.stay-connected-section .bike-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.stay-connected-section {
+  background: url('abstract-geometric-wireframe-background_52683-59421.avif') no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  overflow: hidden;
+  position: relative;
+  color: rgb(0, 0, 0);
+  /* Optional: make text visible on dark backgrounds */
+}
+
+.stay-connected-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Optional: dark overlay */
+  z-index: 0;
+}
+
+.stay-connected-section .section-title,
+.stay-connected-section .scroll-container {
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 320px;
+}
